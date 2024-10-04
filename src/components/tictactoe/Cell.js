@@ -16,7 +16,7 @@ const Cell = ({ value, onClick }) => {
   // equivalent to
   // const { value, onClick } = props;
   return (
-    <div className="game-cell" onClick={onClick}>
+    <div className={`game-cell is-${value ?? "blank"}`} onClick={onClick}>
       {value}
     </div>
   );

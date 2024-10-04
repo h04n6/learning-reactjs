@@ -20,13 +20,16 @@ const Game = () => {
 
   const handleResetGame = () => {
     setBoard(Array(9).fill(null));
+    setXIsNext(true);
   };
 
   return (
     <div>
       <Board cells={board} onClick={handleClick}></Board>
       <p>Winner is {winner ?? "???"}</p>
-      <button onClick={handleResetGame}>Reset game</button>
+      <button className="game-reset" onClick={handleResetGame}>
+        Reset game
+      </button>
     </div>
   );
 };
